@@ -9,8 +9,8 @@ LearnVerify читает публичный адрес кошелька студ
 | | |
 |--|--|
 | **GitHub** | https://github.com/ron1nrest/solkaz-learnverify |
-| **Demo video** | _добавьте ссылку после записи_ → [сценарий](docs/10-demo-video-script.md) |
-| **Грант** | [Solana Foundation Kazakhstan Grants](https://superteam.fun/earn/grants/solana-foundation-kazakhstan-grants) · [текст заявки](docs/grant-application-ready.md) |
+| **Demo video** | https://drive.google.com/file/d/1YK-SNE1bH2b7mJu2fNByhE6lCpz_xlSz/view?usp=sharing |
+| **Грант** | [Solana Foundation Kazakhstan Grants](https://superteam.fun/earn/grants/solana-foundation-kazakhstan-grants) |
 | **PoW** | [чеклист](docs/pow-checklist.md) · [пример cohort JSON](reports/example-cohort.json) |
 
 ---
@@ -76,7 +76,7 @@ learnverify cohort -c week1-fundamentals.yaml --wallets cohort.csv --out reports
 | CLI + 6 verifiers + 5 challenges | ✅ |
 | cohort + CI + 26 tests | ✅ |
 | Docs + grant pack | ✅ |
-| Demo video URL в README | 🔲 следующий шаг |
+| Demo video URL в README | ✅ |
 | GitHub public + push | ✅ |
 | Пилот bootcamp KZ (этап 6) | 🔲 после гранта |
 
