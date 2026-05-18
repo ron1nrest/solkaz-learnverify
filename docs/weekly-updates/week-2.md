@@ -16,5 +16,5 @@
 - Task types: 6/6
 - Tests: 17+
 
-🔗 Repo: YOUR_GITHUB_URL
+🔗 Repo: https://github.com/ron1nrest/solkaz-learnverify
 ```

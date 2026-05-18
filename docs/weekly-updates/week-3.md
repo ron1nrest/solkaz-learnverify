@@ -16,5 +16,5 @@
 - Integration tests: 8
 - Cohort smoke: 2 wallets / week0
 
-🔗 Repo: YOUR_GITHUB_URL
+🔗 Repo: https://github.com/ron1nrest/solkaz-learnverify
 ```

@@ -17,6 +17,6 @@
 - Mentor time saved: ~__ hours
 - Wallets verified: __
 
-🔗 Repo: YOUR_GITHUB_URL
+🔗 Repo: https://github.com/ron1nrest/solkaz-learnverify
 📄 Pilot report: reports/pilot-YYYY-MM.md
 ```
