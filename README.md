@@ -8,6 +8,7 @@ LearnVerify читает публичный адрес кошелька студ
 
 | | |
 |--|--|
+| **GitHub** | https://github.com/ron1nrest/solkaz-learnverify |
 | **Demo video** | _добавьте ссылку после записи_ → [сценарий](docs/10-demo-video-script.md) |
 | **Грант** | [Solana Foundation Kazakhstan Grants](https://superteam.fun/earn/grants/solana-foundation-kazakhstan-grants) · [текст заявки](docs/grant-application-ready.md) |
 | **PoW** | [чеклист](docs/pow-checklist.md) · [пример cohort JSON](reports/example-cohort.json) |
@@ -19,7 +20,7 @@ LearnVerify читает публичный адрес кошелька студ
 **Требования:** Node.js ≥ 20
 
 ```powershell
-git clone YOUR_GITHUB_URL
+git clone https://github.com/ron1nrest/solkaz-learnverify.git
 cd SolanaAI
 npm install
 npm run build
@@ -76,7 +77,7 @@ learnverify cohort -c week1-fundamentals.yaml --wallets cohort.csv --out reports
 | cohort + CI + 26 tests | ✅ |
 | Docs + grant pack | ✅ |
 | Demo video URL в README | 🔲 ваш шаг |
-| GitHub public + Apply | 🔲 ваш шаг |
+| GitHub public + push | 🔲 один раз: `.\scripts\publish-github.ps1` |
 | Пилот bootcamp KZ (этап 6) | 🔲 после гранта |
 
 ---

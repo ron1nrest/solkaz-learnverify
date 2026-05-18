@@ -61,7 +61,7 @@ Verification uses consensus across 2+ RPC providers; divergent responses surface
 Pilot with Superteam KZ / local bootcamp cohort; Russian documentation; addressing emerging-market education infrastructure gap.
 
 ### Proof of work (link)
-- GitHub: `YOUR_GITHUB_URL` (см. также [grant-application-ready.md](grant-application-ready.md))
+- GitHub: https://github.com/ron1nrest/solkaz-learnverify
 - Demo video (RU, 2–3 min): `YOUR_VIDEO_URL` — сценарий [10-demo-video-script.md](10-demo-video-script.md)
 - Sample report: [reports/example-cohort.json](../reports/example-cohort.json)
 

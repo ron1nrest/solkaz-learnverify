@@ -18,5 +18,5 @@
 - Challenges: 5
 - Task types live: 0 → target 2
 
-🔗 Repo: YOUR_GITHUB_URL
+🔗 Repo: https://github.com/ron1nrest/solkaz-learnverify
 ```

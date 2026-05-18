@@ -15,7 +15,7 @@
 
 ## Ваши действия
 
-- [ ] Создать **публичный** GitHub repo и push
+- [ ] Push: `.\scripts\publish-github.ps1` (логин GitHub в браузере один раз)
 - [ ] Записать **demo video** ([10-demo-video-script.md](10-demo-video-script.md))
 - [ ] Вставить URL в README и [grant-application-ready.md](grant-application-ready.md)
 - [ ] Email **talgat@superteam.kz** (шаблон в [07-grant-playbook.md](07-grant-playbook.md))

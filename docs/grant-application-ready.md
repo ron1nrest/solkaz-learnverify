@@ -2,7 +2,7 @@
 
 **Программа:** [Solana Foundation Kazakhstan Grants](https://superteam.fun/earn/grants/solana-foundation-kazakhstan-grants)  
 **Сумма:** $3,000 USDG  
-**Репозиторий:** замените `YOUR_GITHUB_URL` перед отправкой
+**Репозиторий:** https://github.com/ron1nrest/solkaz-learnverify
 
 ---
 
@@ -33,7 +33,7 @@ Balance checks use 2+ RPC endpoints; mismatches surface warnings—teaching not 
 Russian docs; built for Superteam KZ / AlmaU-style bootcamps; pilot cohort planned locally.
 
 ### Proof of work
-- Repo: YOUR_GITHUB_URL
+- Repo: https://github.com/ron1nrest/solkaz-learnverify
 - Demo (RU, 2–3 min): YOUR_VIDEO_URL
 - Sample cohort JSON: `reports/example-cohort.json` in repo
 - CLI: `learnverify` v0.1.0 — verify, cohort, doctor, 5 challenges
@@ -83,7 +83,8 @@ talgat@superteam.kz (согласование когорты)
 ## Чеклист перед Submit
 
 - [ ] GitHub public + README
-- [ ] Вставить YOUR_GITHUB_URL и YOUR_VIDEO_URL выше
+- [x] GitHub URL в документах
+- [ ] `.\scripts\publish-github.ps1` (push) + YOUR_VIDEO_URL
 - [ ] Записать demo по [10-demo-video-script.md](10-demo-video-script.md)
 - [ ] Email Superteam KZ (шаблон в [07-grant-playbook.md](07-grant-playbook.md))
 - [ ] Submit на Superteam Earn

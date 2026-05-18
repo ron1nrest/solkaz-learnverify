@@ -50,7 +50,7 @@ https://explorer.solana.com/?cluster=devnet
 Из папки проекта (нужен [Node.js 20+](https://nodejs.org/)):
 
 ```powershell
-git clone YOUR_GITHUB_URL
+git clone https://github.com/ron1nrest/solkaz-learnverify.git
 cd SolanaAI
 npm install
 npm run build
