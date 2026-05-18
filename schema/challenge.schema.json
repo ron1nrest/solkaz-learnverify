@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://solkaz.dev/learnverify/challenge.schema.json",
+  "title": "LearnVerify Challenge",
+  "type": "object",
+  "required": ["id", "version", "network", "title", "tasks"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Unique challenge slug"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1
+    },
+    "network": {
+      "type": "string",
+      "const": "devnet"
+    },
+    "title": {
+      "type": "object",
+      "required": ["ru"],
+      "properties": {
+        "ru": { "type": "string", "minLength": 1 },
+        "en": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "description": {
+      "type": "object",
+      "properties": {
+        "ru": { "type": "string" },
+        "en": { "type": "string" }
+      }
+    },
+    "estimated_minutes": {
+      "type": "number",
+      "minimum": 1
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/task" }
+    }
+  },
+  "$defs": {
+    "taskBase": {
+      "type": "object",
+      "required": ["name", "type"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "balance_min",
+            "signature_count_min",
+            "transfer_sent",
+            "transfer_received",
+            "spl_mint_created",
+            "spl_token_account"
+          ]
+        },
+        "hint": {
+          "type": "object",
+          "properties": {
+            "ru": { "type": "string" },
+            "en": { "type": "string" }
+          }
+        }
+      }
+    },
+    "task": {
+      "oneOf": [
+        {
+          "allOf": [
+            { "$ref": "#/$defs/taskBase" },
+            {
+              "properties": {
+                "type": { "const": "balance_min" },
+                "lamports": { "type": "integer", "minimum": 0 }
+              },
+              "required": ["lamports"]
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/$defs/taskBase" },
+            {
+              "properties": {
+                "type": { "const": "signature_count_min" },
+                "count": { "type": "integer", "minimum": 1 },
+                "limit": { "type": "integer", "minimum": 1, "default": 100 }
+              },
+              "required": ["count"]
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/$defs/taskBase" },
+            {
+              "properties": {
+                "type": { "const": "transfer_sent" },
+                "min_lamports": { "type": "integer", "minimum": 1 },
+                "to": { "type": "string", "minLength": 32, "maxLength": 44 }
+              },
+              "required": ["min_lamports"]
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/$defs/taskBase" },
+            {
+              "properties": {
+                "type": { "const": "transfer_received" },
+                "min_lamports": { "type": "integer", "minimum": 1 }
+              },
+              "required": ["min_lamports"]
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/$defs/taskBase" },
+            {
+              "properties": {
+                "type": { "const": "spl_mint_created" },
+                "decimals": { "type": "integer", "minimum": 0, "maximum": 9 }
+              },
+              "required": ["decimals"]
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/$defs/taskBase" },
+            {
+              "properties": {
+                "type": { "const": "spl_token_account" },
+                "mint": { "type": "string", "minLength": 32, "maxLength": 44 }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

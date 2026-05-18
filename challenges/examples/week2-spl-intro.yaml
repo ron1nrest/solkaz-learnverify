@@ -1,0 +1,28 @@
+id: kz-week2-spl-intro
+version: 1
+network: devnet
+
+title:
+  ru: "Неделя 2 — SPL Token"
+  en: "Week 2 — SPL Token Intro"
+description:
+  ru: "Создание SPL mint и token account на Devnet."
+estimated_minutes: 60
+
+tasks:
+  - name: created-class-token
+    type: spl_mint_created
+    decimals: 9
+    hint:
+      ru: "Создайте токен: spl-token create-token --decimals 9 (или урок ментора)."
+
+  - name: has-token-account
+    type: spl_token_account
+    hint:
+      ru: "Создайте associated token account для своего mint."
+
+  - name: still-funded
+    type: balance_min
+    lamports: 10000000
+    hint:
+      ru: "На кошельке должно остаться ≥ 0.01 SOL для комиссий."

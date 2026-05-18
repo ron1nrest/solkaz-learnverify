@@ -1,0 +1,24 @@
+id: kz-week3-activity
+version: 1
+network: devnet
+
+title:
+  ru: "Неделя 3 — Активность в сети"
+  en: "Week 3 — Network Activity"
+description:
+  ru: "Закрепление: несколько подтверждённых транзакций и входящий перевод."
+estimated_minutes: 30
+
+tasks:
+  - name: active-builder
+    type: signature_count_min
+    count: 5
+    limit: 100
+    hint:
+      ru: "Выполните ≥ 5 транзакций за неделю (transfers, SPL, любые)."
+
+  - name: received-funds
+    type: transfer_received
+    min_lamports: 1000000
+    hint:
+      ru: "Получите ≥ 0.001 SOL от другого кошелька (peer или ментор)."

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "description": "Golden scenarios for LearnVerify — CI uses mocked integration tests; manual E2E uses Devnet wallet.",
+  "integrationScenarios": [
+    {
+      "id": "week0-full-pass",
+      "challenge": "week0-setup.yaml",
+      "expected": { "success": true, "passed": 2, "total": 2 }
+    },
+    {
+      "id": "week1-full-pass",
+      "challenge": "week1-fundamentals.yaml",
+      "expected": { "success": true, "passed": 3, "total": 3 },
+      "mocks": ["sentTransfer"]
+    },
+    {
+      "id": "week2-spl-pass",
+      "challenge": "week2-spl-intro.yaml",
+      "expected": { "success": true, "passed": 3, "total": 3 },
+      "mocks": ["splMint", "tokenAccount"]
+    }
+  ],
+  "manualE2e": {
+    "envVar": "E2E_DEVNET_WALLET",
+    "command": "npm run test:e2e",
+    "setup": [
+      "solana config set --url devnet",
+      "solana airdrop 2 $E2E_DEVNET_WALLET",
+      "npm run test:e2e"
+    ]
+  },
+  "goldenWallets": {
+    "note": "Fill after creating dedicated Devnet test wallets — never commit private keys",
+    "passWeek1": { "pubkey": null, "challenge": "kz-week1-fundamentals" },
+    "partialWeek2": { "pubkey": null, "challenge": "kz-week2-spl-intro" }
+  }
+}

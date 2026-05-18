@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tsbuildinfo
+reports/cohort-*.json
+reports/test-*.json
+!reports/example-cohort.json
+.wallets.local.csv

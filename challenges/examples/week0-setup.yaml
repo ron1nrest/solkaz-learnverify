@@ -1,0 +1,24 @@
+id: kz-week0-setup
+version: 1
+network: devnet
+
+title:
+  ru: "Неделя 0 — Настройка кошелька"
+  en: "Week 0 — Wallet Setup"
+description:
+  ru: "Проверка, что кошелёк создан и пополнен через Devnet faucet."
+estimated_minutes: 20
+
+tasks:
+  - name: wallet-exists
+    type: signature_count_min
+    count: 1
+    limit: 10
+    hint:
+      ru: "Сделайте любую транзакцию с кошелька (например, airdrop + подтверждение в Explorer)."
+
+  - name: minimum-balance
+    type: balance_min
+    lamports: 50000000
+    hint:
+      ru: "Запросите Devnet SOL через faucet (минимум 0.05 SOL)."

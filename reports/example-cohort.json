@@ -1,0 +1,105 @@
+{
+  "challengeId": "kz-week0-setup",
+  "network": "devnet",
+  "generatedAt": "2026-05-19T12:00:00.000Z",
+  "summary": {
+    "total": 3,
+    "fullPass": 2,
+    "partial": 1,
+    "errors": 0
+  },
+  "rows": [
+    {
+      "wallet": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+      "name": "Student_A",
+      "line": 2,
+      "report": {
+        "challengeId": "kz-week0-setup",
+        "network": "devnet",
+        "wallet": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+        "passed": 2,
+        "total": 2,
+        "success": true,
+        "tasks": [
+          {
+            "name": "wallet-exists",
+            "type": "signature_count_min",
+            "status": "pass",
+            "message": "подтверждённых транзакций: 5 ≥ 1"
+          },
+          {
+            "name": "minimum-balance",
+            "type": "balance_min",
+            "status": "pass",
+            "message": "balance 0.1500 SOL ≥ 0.0500 SOL"
+          }
+        ],
+        "rpcWarnings": [],
+        "durationMs": 920
+      },
+      "exitCode": 0
+    },
+    {
+      "wallet": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
+      "name": "Student_B",
+      "line": 3,
+      "report": {
+        "challengeId": "kz-week0-setup",
+        "network": "devnet",
+        "wallet": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
+        "passed": 2,
+        "total": 2,
+        "success": true,
+        "tasks": [
+          {
+            "name": "wallet-exists",
+            "type": "signature_count_min",
+            "status": "pass",
+            "message": "подтверждённых транзакций: 3 ≥ 1"
+          },
+          {
+            "name": "minimum-balance",
+            "type": "balance_min",
+            "status": "pass",
+            "message": "balance 0.0800 SOL ≥ 0.0500 SOL"
+          }
+        ],
+        "rpcWarnings": [],
+        "durationMs": 880
+      },
+      "exitCode": 0
+    },
+    {
+      "wallet": "ExamplePartialWallet1111111111111111111111",
+      "name": "Student_C",
+      "line": 4,
+      "report": {
+        "challengeId": "kz-week0-setup",
+        "network": "devnet",
+        "wallet": "ExamplePartialWallet1111111111111111111111",
+        "passed": 1,
+        "total": 2,
+        "success": false,
+        "tasks": [
+          {
+            "name": "wallet-exists",
+            "type": "signature_count_min",
+            "status": "pass",
+            "message": "подтверждённых транзакций: 2 ≥ 1"
+          },
+          {
+            "name": "minimum-balance",
+            "type": "balance_min",
+            "status": "fail",
+            "message": "balance 0.0010 SOL < 0.0500 SOL",
+            "hint": "Запросите Devnet SOL через faucet (минимум 0.05 SOL)."
+          }
+        ],
+        "rpcWarnings": [],
+        "durationMs": 750
+      },
+      "exitCode": 1
+    }
+  ],
+  "durationMs": 4200
+}

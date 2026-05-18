@@ -1,0 +1,36 @@
+id: kz-week4-review
+version: 1
+network: devnet
+
+title:
+  ru: "Неделя 4 — Итоговая проверка"
+  en: "Week 4 — Review Exam"
+description:
+  ru: "Комбинированный challenge: баланс, перевод, SPL mint, активность."
+estimated_minutes: 90
+
+tasks:
+  - name: exam-balance
+    type: balance_min
+    lamports: 50000000
+    hint:
+      ru: "Баланс ≥ 0.05 SOL."
+
+  - name: exam-transfer
+    type: transfer_sent
+    min_lamports: 5000000
+    hint:
+      ru: "Исходящий перевод ≥ 0.005 SOL."
+
+  - name: exam-mint
+    type: spl_mint_created
+    decimals: 9
+    hint:
+      ru: "Создайте новый SPL mint (можно другой, чем на неделе 2)."
+
+  - name: exam-activity
+    type: signature_count_min
+    count: 8
+    limit: 150
+    hint:
+      ru: "Минимум 8 подтверждённых транзакций в истории кошелька."

@@ -1,0 +1,30 @@
+id: kz-week1-fundamentals
+version: 1
+network: devnet
+
+title:
+  ru: "Неделя 1 — Основы: SOL и переводы"
+  en: "Week 1 — SOL & Transfers"
+description:
+  ru: "Баланс Devnet SOL и исходящий перевод другому участнику."
+estimated_minutes: 45
+
+tasks:
+  - name: funded-wallet
+    type: balance_min
+    lamports: 100000000
+    hint:
+      ru: "Пополните кошелёк до ≥ 0.1 SOL через Devnet faucet."
+
+  - name: sent-to-peer
+    type: transfer_sent
+    min_lamports: 10000000
+    hint:
+      ru: "Отправьте ≥ 0.01 SOL на адрес одногруппника или адрес ментора."
+
+  - name: was-active
+    type: signature_count_min
+    count: 2
+    limit: 50
+    hint:
+      ru: "Выполните минимум 2 транзакции (faucet + transfer засчитываются)."
