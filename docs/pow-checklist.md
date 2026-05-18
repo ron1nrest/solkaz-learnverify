@@ -15,7 +15,7 @@
 
 ## Ваши действия
 
-- [ ] Push: `.\scripts\publish-github.ps1` (логин GitHub в браузере один раз)
+- [x] Push: https://github.com/ron1nrest/solkaz-learnverify
 - [ ] Записать **demo video** ([10-demo-video-script.md](10-demo-video-script.md))
 - [ ] Вставить URL в README и [grant-application-ready.md](grant-application-ready.md)
 - [ ] Email **talgat@superteam.kz** (шаблон в [07-grant-playbook.md](07-grant-playbook.md))

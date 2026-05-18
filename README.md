@@ -77,7 +77,7 @@ learnverify cohort -c week1-fundamentals.yaml --wallets cohort.csv --out reports
 | cohort + CI + 26 tests | ✅ |
 | Docs + grant pack | ✅ |
 | Demo video URL в README | 🔲 ваш шаг |
-| GitHub public + push | 🔲 один раз: `.\scripts\publish-github.ps1` |
+| GitHub public + push | ✅ |
 | Пилот bootcamp KZ (этап 6) | 🔲 после гранта |
 
 ---
