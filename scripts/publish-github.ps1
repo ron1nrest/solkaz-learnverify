@@ -46,11 +46,23 @@ if ($LASTEXITCODE -ne 0) {
   & $ghExe auth login -h github.com -p https -w
 }
 
-if (git remote get-url origin 2>$null) {
+$hasOrigin = $false
+$prevEap = $ErrorActionPreference
+$ErrorActionPreference = "SilentlyContinue"
+$null = git remote get-url origin 2>&1
+if ($LASTEXITCODE -eq 0) {
+  $hasOrigin = $true
+}
+$ErrorActionPreference = $prevEap
+
+if ($hasOrigin) {
   Write-Host "Pushing to origin..." -ForegroundColor Green
   git push -u origin main
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
   & $ghExe repo view --web
-  exit $LASTEXITCODE
+  exit 0
 }
 
 Write-Host "Creating repo $RepoName and pushing..." -ForegroundColor Green
